@@ -50,7 +50,10 @@ def house_price_prediction_sim():
     lot_area = st.slider('Lot area of house', 1000, 15000, 1500)
     overall_cond = st.slider('Condition of house', 1, 10, 5)
     year_built = st.slider('Year built', 1850, 2020, 1975)
-    year_remod = st.slider('Year remodeled', year_built, 2020, year_built)
+    if (year_built < 2020):
+        year_remod = st.slider('Year remodeled', year_built, 2020, year_built)
+    if (year_built == 2020):
+        year_remod = st.slider('Year remodeled', year_built, 2019, year_built, disabled=True)
     bsmt_fin_sf2 = st.slider('Type 2 finished square feet', 0.0, 2000.0, 0.0)
     bsmt_sf = st.slider('Basement square feet', 0.0, 6500.0, 0.0)
 
