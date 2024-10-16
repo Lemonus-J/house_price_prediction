@@ -32,7 +32,12 @@ if (selection == 'House Price Dataset Analysis'):
     occurence = st.sidebar.slider('Units Sold:', price_count.min(), price_count.max(), (price_count.max()-1, price_count.max()))
 
 def house_price_prediction_sim():
-    ext = ['AsbShng', 'AsphShn', 'BrkComm', 'BrkFace', 'CBlock', 'CemntBd', 'HdBoard', 'ImStucc', 'MetalSd', 'Plywood', 'Stone', 'Stucco', 'VinylSd', 'WdSdng', 'WdShing']
+    ext = [
+    'Asbestos Shingle', 'Asphalt Shingle', 'Brick Common', 'Brick Face', 
+    'Concrete Block', 'Cement Board', 'Hard Board', 'Imitation Stucco', 
+    'Metal Siding', 'Plywood Siding', 'Stone', 'Stucco', 
+    'Vinyl Siding', 'Wood Siding', 'Wood Shingle'
+    ]
     bldg = ['Single-Family Detached', 'Two-Family Conversion', 'Duplex', 'Townhouse Inside Unit', 'Townhouse End Unit']
     lot = ['Corner Lot', 'Cul-de-sac', 'Frontage on 2 Sides of Property', 'Frontage on 3 Sides of Property', 'Inside Lot']
     zoning = ['Commercial (all)', 'Floodway', 'Residential High Density', 'Residential Low Density', 'Residential Medium Density']
